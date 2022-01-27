@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\hotels;
+use App\Models\villas;
+use App\Models\riads;
+use App\Models\chalets;
+use App\Models\apartements;
 
 class FirstController extends Controller
 {
@@ -34,7 +38,8 @@ class FirstController extends Controller
     }
     public function appartements()
     {
-        return view('appartements');
+        $appartement = apartements::all();
+        return view('appartements', compact('appartement'));
     }
     
     public function agadir()
@@ -63,15 +68,18 @@ class FirstController extends Controller
     }
     public function villas()
     {
-        return view('villas');
+        $villa = villas::all();
+        return view('villas', compact('villa'));
     }
     public function chalets()
     {
-        return view('chalets');
+        $chalet = chalets::all();
+        return view('chalets', compact('chalet'));
     }
     public function riads()
     {
-        return view('riads');
+        $riad = riads::all();
+        return view('riads', compact('riad'));
     }
     public function admin()
     {

@@ -74,10 +74,22 @@
 					</div>
 				</div>
 			</div>
+			<table class="table table-bordered " style="width:80%;position:absolute;left:12%;height:4em;" id="hotel_content" >
+  <tr>
+     <th width="50px">No</th>
+     <th>name</th>
+     <th>city</th>
+</tr>
+<?php $no=1; ?>
+@foreach ($appartement as $key => $value)
+<tr>
+   <td>{{$no++}}</td>
+   <td>{{ $value->name }}</td>
+   <td>{{ $value->city }}</td>
+</tr> 
+@endforeach
+</table> 
       </div>
 </div>
-
-
-
 @stop
  
