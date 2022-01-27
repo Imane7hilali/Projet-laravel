@@ -14,16 +14,38 @@
 <body>
 <div class="navbar0">
 <nav class="navbar navbar-expand-md">
+  @guest
  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{{url('login')}}">S'inscrire</a>
+                <a class="nav-link" href="{{url('register')}}">S'inscrire</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{url('register')}}">Se connecter</a>
+                <a class="nav-link" href="{{url('login')}}">Se connecter</a>
             </li>
         </ul>
     </div>
+  @endguest
+  @auth
+  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="#">{{Auth::user()->name}}</a>
+          </li>
+          <li class="#">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+          </li>
+        </ul>
+    </div>
+  @endauth
  </nav>
 </div>
 <div class="navbar1">
@@ -38,6 +60,13 @@
     <li class="nav-item">
       <a class="nav-link" href="{{url('voiture_de_location')}}"><i class="fa fa-car" aria-hidden="true"></i> Voiture de location</a>
     </li>
+    @auth
+    @if(Auth::user()->isAdmin == "1") 
+    <li class="nav-item">
+      <a href="{{url('admin/hotel')}}" class=" nav-link">Admin Panel</a>
+    </li>
+    @endif
+    @endauth
   </ul> 
 </nav>
 </div>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\hotels;
+
 class FirstController extends Controller
 {
     /**
@@ -27,7 +29,8 @@ class FirstController extends Controller
     }
     public function hotels()
     {
-        return view('hotels');
+        $hotel = hotels::all();
+        return view('hotels', compact('hotel'));
     }
     public function appartements()
     {
@@ -70,7 +73,10 @@ class FirstController extends Controller
     {
         return view('riads');
     }
-    
+    public function admin()
+    {
+        return view('admin');
+    }
     
     
 
@@ -139,7 +145,4 @@ class FirstController extends Controller
     {
         //
     } 
-    public function admin(){
-         return view('admin.admin_home');
-    }
 }

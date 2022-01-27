@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HotelController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 use Illuminate\Support\Facades\Auth;
@@ -52,6 +54,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('admin.admin_home',[App\Http\Controllers\FirstController::class,'admin.admin_home']);
-
- 
+//Route::get('admin',[App\Http\Controllers\FirstController::class,'admin']);
+Route::resource('admin/hotel' , HotelController::class);
+Route::resource('admin/user' , UserController::class);
+Route::get('admin/profile' , function(){
+    return view('profile');
+});
