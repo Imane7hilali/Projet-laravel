@@ -22,7 +22,19 @@
             <li class="nav-item w-100">
             <a href="{{URL('admin/user')}}" class="nav-link text-light pl-4">Users</a>
             </li>
-            <li class="nav-item dropdown w-100" style="margin-top: 90%;">
+            <li class="nav-item w-100">
+            <a href="{{URL('admin/chalet')}}" class="nav-link text-light pl-4">chalets</a>
+            </li>
+            <li class="nav-item w-100">
+            <a href="{{URL('admin/riad')}}" class="nav-link text-light pl-4">riads</a>
+            </li>
+            <li class="nav-item w-100">
+            <a href="{{URL('admin/appartement')}}" class="nav-link text-light pl-4">Appartements</a>
+            </li>
+            <li class="nav-item w-100">
+            <a href="{{URL('admin/villa')}}" class="nav-link text-light pl-4">villas</a>
+            </li>
+            <li class="nav-item dropdown w-100" >
                 <a href="#" class="nav-link dropdown-toggle text-light pl-4" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >{{Auth::user()->name}}</a>
                 <ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
                     <li><a href="{{URL('admin/profile')}}" class="dropdown-item text-light pl-4 p-2">Profile</a></li>

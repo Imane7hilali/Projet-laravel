@@ -8,7 +8,7 @@ use App\Models\hotels;
 use App\Models\villas;
 use App\Models\riads;
 use App\Models\chalets;
-use App\Models\apartements;
+use App\Models\appartements;
 
 class FirstController extends Controller
 {
@@ -38,7 +38,7 @@ class FirstController extends Controller
     }
     public function appartements()
     {
-        $appartement = apartements::all();
+        $appartement = appartements::all();
         return view('appartements', compact('appartement'));
     }
     

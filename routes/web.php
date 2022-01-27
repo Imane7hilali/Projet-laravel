@@ -2,6 +2,10 @@
 
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\appartementController;
+use App\Http\Controllers\chaletController;
+use App\Http\Controllers\riadController;
+use App\Http\Controllers\villaController;
 use Illuminate\Support\Facades\Route;
 
 use Illuminate\Support\Facades\Auth;
@@ -60,3 +64,7 @@ Route::resource('admin/user' , UserController::class);
 Route::get('admin/profile' , function(){
     return view('profile');
 });
+Route::resource('admin/riad' , riadController::class);
+Route::resource('admin/villa' , villaController::class);
+Route::resource('admin/appartement' , appartementController::class);
+Route::resource('admin/chalet' , chaletController::class);
