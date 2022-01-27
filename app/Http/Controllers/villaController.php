@@ -24,7 +24,7 @@ class villaController extends Controller
     
         ]);
         villas::create($request->all());
-        return redirect()->route('villaindex')->with('success', 'villa created success');
+        return redirect()->route('villa.index')->with('success', 'villa created success');
     }
 
     public function show($id){
@@ -45,11 +45,11 @@ class villaController extends Controller
     
         ]);
         villas::find($id)->update($request->all());
-        return redirect()->route('villaindex')->with('success', 'villa update success');
+        return redirect()->route('villa.index')->with('success', 'villa update success');
     }
 
     public function destroy($id){
         villas::find($id)->delete();
-        return redirect()->route('villaindex')->with('success', 'villa deleted success');
+        return redirect()->route('villa.index')->with('success', 'villa deleted success');
     }
 }

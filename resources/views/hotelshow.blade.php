@@ -3,11 +3,11 @@
 <div class="row ">
    <div class="col-lg-12 margin-tb">
        <div class="pull-left">
-          <h2> Show Hotel</h2>
+          <h2> Hotel</h2>
        </div>
    <div class="pull-right">
       <br/>
-      <a class="btn btn-primary" href="{{ route('admin.index') }}"> <i class="glyphicon glyphicon-arrow-left"></i></a>
+      <a class="btn btn-primary" href="{{ route('hotel.index') }}"> <i class="bi bi-arrow-left"></i></a>
    </div>
 </div>
 </div>

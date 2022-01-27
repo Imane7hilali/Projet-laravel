@@ -60,6 +60,9 @@
     <li class="nav-item">
       <a class="nav-link" href="{{url('voiture_de_location')}}"><i class="fa fa-car" aria-hidden="true"></i> Voiture de location</a>
     </li>
+    <li class="nav-item">
+      <a href="{{URL('contact')}}" class="nav-link">Contact</a>
+    </li>
     @auth
     @if(Auth::user()->isAdmin == "1") 
     <li class="nav-item">

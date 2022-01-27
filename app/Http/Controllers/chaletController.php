@@ -24,7 +24,7 @@ class chaletController extends Controller
     
         ]);
         chalets::create($request->all());
-        return redirect()->route('chaletindex')->with('success', 'chalet created success');
+        return redirect()->route('chalet.index')->with('success', 'chalet created success');
     }
 
     public function show($id){
@@ -45,11 +45,11 @@ class chaletController extends Controller
     
         ]);
         chalets::find($id)->update($request->all());
-        return redirect()->route('chaletindex')->with('success', 'chalet update success');
+        return redirect()->route('chalet.index')->with('success', 'chalet update success');
     }
 
     public function destroy($id){
         chalets::find($id)->delete();
-        return redirect()->route('chaletindex')->with('success', 'chalet deleted success');
+        return redirect()->route('chalet.index')->with('success', 'chalet deleted success');
     }
 }

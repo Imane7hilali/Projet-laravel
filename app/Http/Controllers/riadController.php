@@ -24,7 +24,7 @@ class riadController extends Controller
     
         ]);
         riads::create($request->all());
-        return redirect()->route('riadindex')->with('success', 'riad created success');
+        return redirect()->route('riad.index')->with('success', 'riad created success');
     }
 
     public function show($id){
@@ -45,11 +45,11 @@ class riadController extends Controller
     
         ]);
         riads::find($id)->update($request->all());
-        return redirect()->route('riadindex')->with('success', 'riad update success');
+        return redirect()->route('riad.index')->with('success', 'riad update success');
     }
 
     public function destroy($id){
         riads::find($id)->delete();
-        return redirect()->route('riadindex')->with('success', 'riad deleted success');
+        return redirect()->route('riad.index')->with('success', 'riad deleted success');
     }
 }

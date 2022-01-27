@@ -4,11 +4,13 @@
     <p>{{ $message }}</p>
   </div>
  @endif
-<table class="table table-bordered " style="width:80%;position:absolute;left:12%;height:4em;" id="hotel_content" >
+ <br><br>
+<table class="table table-hover " style="width:80%;position:absolute;left:12%;height:4em;" id="hotel_content" >
   <tr>
      <th width="50px">No</th>
      <th>name</th>
-     <th>city</th>
+     <th>email</th>
+     <th style="text-align:left;">Admin</th>
      <th width="140px" class="text-center">
        <a href="{{route('user.create')}}" class="btn btn-success">
          <i class="bi bi-plus"></i>
@@ -20,7 +22,8 @@
 <tr>
    <td>{{$no++}}</td>
    <td>{{ $value->name }}</td>
-   <td>{{ $value->city }}</td>
+   <td>{{ $value->email }}</td> 
+   <td> @if($value->isAdmin=='1')yes @else no @endif</td> 
    <td>
       <a class="btn btn-info" href="{{route('user.show',$value->id)}}">
          <i class="bi bi-microsoft" style="color:white"></i></a>

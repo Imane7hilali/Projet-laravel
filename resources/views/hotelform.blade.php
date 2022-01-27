@@ -21,7 +21,28 @@
    </div>
  </div>
 </div>
-
+<div class="row">
+  <div class="col-sm-2">
+    {!! form::label('address','Address') !!}
+  </div>
+ <div class="col-sm-10">
+    <div class="form-group {{ $errors->has('address') ? 'has-error' : "" }}">
+      {{ Form::text('address',NULL, ['class'=>'form-control', 'id'=>'address', 'placeholder'=>'hotel address']) }}
+      {{ $errors->first('address', '<p class="help-block">:message</p>') }}
+   </div>
+ </div>
+</div>
+<div class="row">
+  <div class="col-sm-2">
+    {!! form::label('mark','Mark') !!}
+  </div>
+ <div class="col-sm-10">
+    <div class="form-group {{ $errors->has('address') ? 'has-error' : "" }}">
+      {{ Form::text('mark',NULL, ['class'=>'form-control', 'id'=>'mark', 'placeholder'=>'hotel mark']) }}
+      {{ $errors->first('mark', '<p class="help-block">:message</p>') }}
+   </div>
+ </div>
+</div>
 <div class="form-group">
 {{ Form::button(isset($model)? 'Update' : 'save' , ['class'=>'btn btn-success', 'type'=>'submit']) }}
 </div>

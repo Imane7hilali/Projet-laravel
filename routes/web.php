@@ -6,6 +6,8 @@ use App\Http\Controllers\appartementController;
 use App\Http\Controllers\chaletController;
 use App\Http\Controllers\riadController;
 use App\Http\Controllers\villaController;
+use App\Http\Controllers\messageController;
+use App\Http\Controllers\message2Controller;
 use Illuminate\Support\Facades\Route;
 
 use Illuminate\Support\Facades\Auth;
@@ -24,7 +26,7 @@ Route::get('/', function () {
     return view('welcome');
 });
  
-
+Route::resource('/contact', messageController::class);
 Route::get('/',[App\Http\Controllers\FirstController::class,'hébergements']);
 Route::get('hébergements',[App\Http\Controllers\FirstController::class,'hébergements']);
 
@@ -68,3 +70,4 @@ Route::resource('admin/riad' , riadController::class);
 Route::resource('admin/villa' , villaController::class);
 Route::resource('admin/appartement' , appartementController::class);
 Route::resource('admin/chalet' , chaletController::class);
+Route::resource('admin/message', message2Controller::class);

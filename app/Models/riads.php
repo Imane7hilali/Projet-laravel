@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class riads extends Model
 {
-    protected $fillable = ['name','city','address','mark','hotel_file_path'];
+    protected $fillable = ['name','city','address','description','mark'];
     protected $dates = ['created_at','updated_at'];
 }

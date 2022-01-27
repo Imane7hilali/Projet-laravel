@@ -38,7 +38,7 @@
                 <a href="#" class="nav-link dropdown-toggle text-light pl-4" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >{{Auth::user()->name}}</a>
                 <ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
                     <li><a href="{{URL('admin/profile')}}" class="dropdown-item text-light pl-4 p-2">Profile</a></li>
-                    <li><a href="#" class="dropdown-item text-light pl-4 p-2">Messages</a></li>
+                    <li><a href="{{URL('admin/message')}}" class="dropdown-item text-light pl-4 p-2">Messages</a></li>
                     <li><a class="dropdown-item text-light pl-4 p-2" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -51,6 +51,9 @@
                         </li>
                 </ul>
             </li>
+            <li class="nav-item w-100">
+                            <a href="{{URL('/')}}" class="nav-link text-light pl-4">return</a>
+                        </li>
         </ul>
     </nav>
     <section class="p-4 content">

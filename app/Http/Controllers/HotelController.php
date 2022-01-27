@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\hotels;
-use Laravel\Ui\Presets\Vue;
+
 
 class HotelController extends Controller
 {
@@ -22,10 +22,9 @@ class HotelController extends Controller
             'name'=>'required',
             'city'=>'required',
             'address'=>'required',
-    
         ]);
         hotels::create($request->all());
-        return redirect()->route('hotelindex')->with('success', 'hotel created success');
+        return redirect()->route('hotel.index')->with('success', 'hotel created success');
     }
 
     public function show($id){
@@ -46,12 +45,12 @@ class HotelController extends Controller
     
         ]);
         hotels::find($id)->update($request->all());
-        return redirect()->route('hotelindex')->with('success', 'hotel update success');
+        return redirect()->route('hotel.index')->with('success', 'hotel update success');
     }
 
     public function destroy($id){
         hotels::find($id)->delete();
-        return redirect()->route('hotelindex')->with('success', 'Hotel deleted success');
+        return redirect()->route('hotel.index')->with('success', 'Hotel deleted success');
     }
 }
 

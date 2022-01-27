@@ -9,6 +9,7 @@ use App\Models\villas;
 use App\Models\riads;
 use App\Models\chalets;
 use App\Models\appartements;
+use App\Models\messages;
 
 class FirstController extends Controller
 {
@@ -97,7 +98,6 @@ class FirstController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -106,7 +106,7 @@ class FirstController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**

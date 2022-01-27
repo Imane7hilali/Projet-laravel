@@ -24,7 +24,7 @@ class appartementController extends Controller
     
         ]);
         appartements::create($request->all());
-        return redirect()->route('Appartementindex')->with('success', 'Appartement created success');
+        return redirect()->route('appartement.index')->with('success', 'Appartement created success');
     }
 
     public function show($id){
@@ -45,11 +45,11 @@ class appartementController extends Controller
     
         ]);
         appartements::find($id)->update($request->all());
-        return redirect()->route('Appartementindex')->with('success', 'Appartement update success');
+        return redirect()->route('appartement.index')->with('success', 'Appartement update success');
     }
 
     public function destroy($id){
         appartements::find($id)->delete();
-        return redirect()->route('Appartementindex')->with('success', 'Appartement deleted success');
+        return redirect()->route('appartement.index')->with('success', 'Appartement deleted success');
     }
 }

@@ -72,18 +72,23 @@
 					</div>
 				</div>
 			</div>
-			<table class="table table-bordered " style="width:80%;position:absolute;left:12%;height:4em;" id="hotel_content" >
+			<br>
+			<table class="table table-hover " style="width:50%;position:absolute;height:4em;" id="hotel_content" >
   <tr>
-     <th width="50px">No</th>
-     <th>name</th>
-     <th>city</th>
+     <th width="10%">Classement</th>
+     <th width="30%" style="text-align:center;">Nom</th>
+     <th width="30%"style="text-align:center;">Ville</th>
+	 <th width="30%"style="text-align:center;">Prix</th>
+	 <th width="30%"><i class="fa fa-hand-o-down" style="position:fixed;margin-left:20px;margin-top:5px;";></i></i></th>
 </tr>
 <?php $no=1; ?>
 @foreach ($hotel as $key => $value)
 <tr>
-   <td>{{$no++}}</td>
-   <td>{{ $value->name }}</td>
-   <td>{{ $value->city }}</td>
+   <td style="text-align:center;">{{$no++}}</td>
+   <td style="text-align:center;">{{ $value->name }}</td>
+   <td style="text-align:center;">{{ $value->city }}</td>
+   <td style="text-align:center;">{{ $value->mark }}</td>
+   <td style="text-align:center;"> <button class="submit-btn" style="background-color: rgb(163, 205, 245);border-radius: 25px 25px 25px 25px; ">Réserver</button> </td>
 </tr> 
 @endforeach
 </table> 
