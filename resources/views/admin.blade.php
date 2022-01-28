@@ -35,7 +35,7 @@
             <a href="{{URL('admin/villa')}}" class="nav-link text-light pl-4">villas</a>
             </li>
             <li class="nav-item w-100">
-            <a href="{{URL('admin/reserver')}}" class="nav-link text-light pl-4">Reservations</a>
+            <a href="{{URL('admin/reservers')}}" class="nav-link text-light pl-4">Reservations</a>
             </li>
             <li class="nav-item dropdown w-100" >
                 <a href="#" class="nav-link dropdown-toggle text-light pl-4" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >{{Auth::user()->name}}</a>

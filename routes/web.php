@@ -75,4 +75,4 @@ Route::resource('admin/appartement' , appartementController::class);
 Route::resource('admin/chalet' , chaletController::class);
 Route::resource('admin/message', message2Controller::class);
 Route::resource('reserver', reserverController::class);
-Route::resource('admin/reserver', reservationController::class);
+Route::resource('admin/reservers', reservationController::class);

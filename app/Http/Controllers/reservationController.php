@@ -25,7 +25,7 @@ class reservationController extends Controller
             'Hotel_id' =>'required',
         ]);
         reserver::create($request->all());
-        return redirect()->route('reserver.index')->with('success', 'reservation created success');
+        return redirect()->route('reservers.index')->with('success', 'reservation created success');
     }
 
     public function show($id){
@@ -48,11 +48,11 @@ class reservationController extends Controller
     
         ]);
         reserver::find($id)->update($request->all());
-        return redirect()->route('reserver.index')->with('success', 'reservation update success');
+        return redirect()->route('reservers.index')->with('success', 'reservation update success');
     }
 
     public function destroy($id){
         reserver::find($id)->delete();
-        return redirect()->route('reserver.index')->with('success', 'reservation deleted success');
+        return redirect()->route('reservers.index')->with('success', 'reservation deleted success');
     }
 }
