@@ -1,11 +1,13 @@
-@extends('layouts.app')
+@extends('layout')
 
 @section('content')
-<div class="container">
+
+<img src="{{ asset('images/wave1.png')}}" class="bottom-img1"> 
+<div class="container" >
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header"style="font-size:22px;font-weight:bold;text-align:center;">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -53,7 +55,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" style="background-color: rgb(163, 205, 245);border-radius: 20px 20px 20px 20px; font-size:20px; width:30%; margin-left:20px;">
                                     {{ __('Login') }}
                                 </button>
 

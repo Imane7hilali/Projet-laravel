@@ -89,7 +89,10 @@
    <td style="text-align:center;">{{ $value->name }}</td>
    <td style="text-align:center;">{{ $value->city }}</td>
    <td style="text-align:center;">{{ $value->mark }}</td>
-   <td style="text-align:center;"> <button class="submit-btn" style="background-color: rgb(163, 205, 245);border-radius: 25px 25px 25px 25px; ">Réserver</button> </td>
+   <form action="{{URL('reserver')}}">
+   <input type="hidden" id="destination" name="hotel_id" value="{{$value->id}}">
+   <td style="text-align:center;"> <button class="submit-btn" style="background-color: rgb(163, 205, 245);border-radius: 25px 25px 25px 25px; " >Réserver</button> </td>
+   </form>
 </tr> 
 @endforeach
 </table> 

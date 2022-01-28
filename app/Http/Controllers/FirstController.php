@@ -9,7 +9,7 @@ use App\Models\villas;
 use App\Models\riads;
 use App\Models\chalets;
 use App\Models\appartements;
-use App\Models\messages;
+use Illuminate\Http\Resources\MergeValue;
 
 class FirstController extends Controller
 {
@@ -27,7 +27,15 @@ class FirstController extends Controller
     {
         return view('vols');
     }
-    
+    public function filtre(Request $request){
+        $hotel = hotels::all();
+        $riad = riads::all();
+        $villa = villas::all();
+        $chalet = chalets::all();
+        $appartement = appartements::all();
+        return view('filtre' , compact('hotel','riad','villa','chalet','appartement'));
+
+    }
     public function voiture_de_location()
     {
         return view('voiture_de_location');

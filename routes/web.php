@@ -8,6 +8,8 @@ use App\Http\Controllers\riadController;
 use App\Http\Controllers\villaController;
 use App\Http\Controllers\messageController;
 use App\Http\Controllers\message2Controller;
+use App\Http\Controllers\reserverController;
+use App\Http\Controllers\reservationController;
 use Illuminate\Support\Facades\Route;
 
 use Illuminate\Support\Facades\Auth;
@@ -56,6 +58,7 @@ Route::get('villas',[App\Http\Controllers\FirstController::class,'villas']);
 Route::get('chalets',[App\Http\Controllers\FirstController::class,'chalets']);
 
 Route::get('riads',[App\Http\Controllers\FirstController::class,'riads']);
+Route::get('filtre',[App\Http\Controllers\FirstController::class,'filtre']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -71,3 +74,5 @@ Route::resource('admin/villa' , villaController::class);
 Route::resource('admin/appartement' , appartementController::class);
 Route::resource('admin/chalet' , chaletController::class);
 Route::resource('admin/message', message2Controller::class);
+Route::resource('reserver', reserverController::class);
+Route::resource('admin/reserver', reservationController::class);

@@ -1,11 +1,13 @@
-@extends('layouts.app')
+@extends('layout')
 
 @section('content')
+
+<img src="{{ asset('images/wave1.png')}}" class="bottom-img1"> 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header" style="font-size:22px;font-weight:bold;text-align:center;">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -59,11 +61,11 @@
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
-                        </div>
+                        </div><br>
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit"  style="background-color: rgb(163, 205, 245);border-radius: 20px 20px 20px 20px; font-size:20px; width:40%; margin-left:90px;">
                                     {{ __('Register') }}
                                 </button>
                             </div>

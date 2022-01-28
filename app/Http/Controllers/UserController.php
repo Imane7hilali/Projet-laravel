@@ -22,9 +22,10 @@ class UserController extends Controller
             'name'=>'required',
             'email'=>'required',
             'password'=>'required',
+            'isAdmin'=>'required',
     
         ]);
-        User::create(['name'=>$request->name,'email'=>$request->email, 'password' => Hash::make($request->password)]);
+        User::create(['name'=>$request->name,'email'=>$request->email, 'password' => Hash::make($request->password),'isAdmin'=>$request->isAdmin]);
         return redirect()->route('user.index')->with('success', 'User created success');
     }
 
@@ -43,10 +44,11 @@ class UserController extends Controller
             'name'=>'required',
             'email'=>'required',
             'password'=>'required',
+            'isAdmin'=>'required',
     
         ]);
-        User::find($id)->update(['name'=>$request->name,'email'=>$request->email, 'password' => Hash::make($request->password)]);
-        return redirect()->route('user.index')->with('success', 'User update success');
+        User::find($id)->update(['name'=>$request->name,'email'=>$request->email, 'password' => Hash::make($request->password), 'isAdmin'=>$request->isAdmin]);
+        return redirect()->route('user.index')->with('success', 'User update success'); 
     }
 
     public function destroy($id){

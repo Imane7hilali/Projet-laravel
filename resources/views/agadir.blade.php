@@ -19,24 +19,24 @@
 			<div class="row">
 				<div class="col-md-4 col-md-pull-7">
 					<div class="booking-form2">
-						<form>
+						<form action="{{URL('filtre')}}">
 							<div class="form-group">
 								<span class="form-label">Votre Destination</span>
 												 
-								<input class="form-control" type="text" value="Agadir" >
+								<input class="form-control" type="text" value="agadir" name='destination' >
 							</div>
 							<div class="row no-margin">
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Arrivée</span>
-										<input class="form-control" type="date" required>
+										<input class="form-control" type="date" name='arrivee'>
 									</div>
 									<span class="in-out hidden-xs">&#8652;</span>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
 										<span class="form-label">Départ</span>
-										<input class="form-control" type="date" required>
+										<input class="form-control" type="date" name='depart'>
 									</div>
 								</div>
 								<div class="col-sm-4">

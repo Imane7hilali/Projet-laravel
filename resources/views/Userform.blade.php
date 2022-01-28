@@ -32,7 +32,10 @@
      </div>
   </div>
 </div>
-
+{{form::label('admin', 'Admin')}}
+{{Form::checkbox('isAdmin', '1')}}
+{{form::label('notadmin', 'NotAdmin')}}
+{{Form::checkbox('isAdmin', '0')}}
 <div class="form-group">
 {{ Form::button(isset($model)? 'Update' : 'save' , ['class'=>'btn btn-success', 'type'=>'submit']) }}
 </div>
